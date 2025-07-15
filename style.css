@@ -1,0 +1,645 @@
+/* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d2b; /* Dark background color */
+            color: #fff; /* White text color */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Grid Background */
+        .grid-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        /* Header Section */
+        .header {
+            position: relative;
+            z-index: 10;
+            padding: 1rem; /* p-4 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* space-x-2 */
+        }
+
+        .logo i {
+            color: #60a5fa; /* text-blue-400 */
+            font-size: 1.5rem; /* text-2xl */
+        }
+
+        .logo span {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 800; /* font-extrabold */
+            color: #fff;
+        }
+
+        /* Desktop Navigation */
+        .desktop-nav {
+            display: none; /* hidden */
+            align-items: center;
+            gap: 2rem; /* space-x-8 */
+        }
+
+        .desktop-nav a {
+            color: #d1d5db; /* text-gray-300 */
+            text-decoration: none;
+            font-weight: 500; /* font-medium */
+            transition: color 0.3s ease;
+        }
+
+        .desktop-nav a:hover {
+            color: #fff;
+        }
+
+        /* Get Started Button (Desktop) */
+        .get-started-button-desktop {
+            display: none; /* hidden */
+            background-color: #2563eb; /* bg-blue-600 */
+            color: #fff;
+            font-weight: 600; /* font-semibold */
+            padding: 0.5rem 1.5rem; /* py-2 px-6 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .get-started-button-desktop:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+        }
+
+        .get-started-button-desktop:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 */
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-button-container {
+            display: block; /* md:hidden */
+        }
+
+        .mobile-menu-button {
+            color: #d1d5db; /* text-gray-300 */
+            background: none;
+            border: none;
+            font-size: 1.5rem; /* text-2xl */
+            cursor: pointer;
+            outline: none;
+        }
+
+        .mobile-menu-button:hover {
+            color: #fff;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 16rem; /* w-64 */
+            background-color: #111827; /* bg-gray-900 */
+            z-index: 50;
+            padding: 1.5rem; /* p-6 */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* shadow-xl */
+            transform: translateX(100%); /* Start off-screen */
+            transition: transform 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0); /* Slide in */
+        }
+
+        .mobile-menu-close-button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem; /* mb-8 */
+        }
+
+        .mobile-menu-close-button {
+            color: #d1d5db; /* text-gray-300 */
+            background: none;
+            border: none;
+            font-size: 1.5rem; /* text-2xl */
+            cursor: pointer;
+            outline: none;
+        }
+
+        .mobile-menu-close-button:hover {
+            color: #fff;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* space-y-6 */
+        }
+
+        .mobile-nav a {
+            color: #d1d5db; /* text-gray-300 */
+            text-decoration: none;
+            font-weight: 500; /* font-medium */
+            font-size: 1.125rem; /* text-lg */
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav a:hover {
+            color: #fff;
+        }
+
+        .get-started-button-mobile {
+            background-color: #2563eb; /* bg-blue-600 */
+            color: #fff;
+            font-weight: 600; /* font-semibold */
+            padding: 0.5rem 1.5rem; /* py-2 px-6 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem; /* mt-4 */
+        }
+
+        .get-started-button-mobile:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+        }
+
+        .get-started-button-mobile:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 */
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 1rem; /* Adjusted for more top space on mobile */
+            min-height: calc(100vh - 80px); /* Ensure it takes up most of the screen height */
+        }
+
+        .hero-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            line-height: 1.25; /* leading-tight */
+            margin-bottom: 1.5rem; /* mb-6 */
+            max-width: 56rem; /* max-w-4xl */
+        }
+
+        .hero-description {
+            font-size: 1.125rem; /* text-lg */
+            color: #d1d5db; /* text-gray-300 */
+            margin-bottom: 2.5rem; /* mb-10 */
+            max-width: 48rem; /* max-w-3xl */
+        }
+
+        /* Impressions Section */
+        .impressions-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem; /* space-x-3 */
+            margin-bottom: 3rem; /* mb-12 */
+            background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800 bg-opacity-50 */
+            padding: 0.75rem 1.5rem; /* px-6 py-3 */
+            border-radius: 9999px; /* rounded-full */
+            border: 1px solid #374151; /* border border-gray-700 */
+        }
+
+        .impressions-section i {
+            color: #60a5fa; /* text-blue-400 */
+            font-size: 1.25rem; /* text-xl */
+        }
+
+        .impressions-section .count {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 700; /* font-bold */
+            color: #fff;
+        }
+
+        .impressions-section .label {
+            font-size: 0.875rem; /* text-sm */
+            color: #9ca3af; /* text-gray-400 */
+            text-transform: uppercase; /* uppercase */
+            letter-spacing: 0.05em; /* tracking-wider */
+        }
+
+        /* Call to Action Buttons */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column; /* flex-col */
+            gap: 1rem; /* space-y-4 */
+        }
+
+        .cta-button {
+            color: #fff;
+            font-weight: 600; /* font-semibold */
+            padding: 0.75rem 2rem; /* py-3 px-8 */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-xl */
+            transition: all 0.3s ease;
+            transform: scale(1); /* initial transform for hover effect */
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none; /* For anchor tags if used */
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05); /* hover:scale-105 */
+        }
+
+        .cta-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 */
+        }
+
+        .cta-button.blue {
+            background-color: #2563eb; /* bg-blue-600 */
+        }
+
+        .cta-button.blue:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+        }
+
+        .cta-button.purple {
+            background-color: #9333ea; /* bg-purple-600 */
+        }
+
+        .cta-button.purple:hover {
+            background-color: #7e22ce; /* hover:bg-purple-700 */
+        }
+
+        .cta-button i {
+            margin-left: 0.75rem; /* ml-3 */
+        }
+
+        .cta-button.purple i {
+            margin-right: 0.75rem; /* mr-3 */
+            margin-left: 0; /* Override default ml-3 for purple button */
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 6rem 1rem; /* py-24 px-4 */
+            text-align: center;
+            max-width: 80rem; /* max-w-5xl */
+            margin: 0 auto; /* mx-auto */
+        }
+
+        .about-section-heading {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 2rem; /* mb-8 */
+            color: #fff;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* space-y-8 */
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.125rem; /* text-lg */
+            line-height: 1.75; /* leading-relaxed */
+            color: #d1d5db; /* text-gray-300 */
+            max-width: 48rem; /* max-w-3xl */
+        }
+
+        .about-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* space-y-8 */
+            margin-top: 2rem; /* mt-8 */
+            width: 100%;
+        }
+
+        .stat-item {
+            background-color: rgba(31, 41, 55, 0.5); /* bg-gray-800 bg-opacity-50 */
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.75rem; /* rounded-xl */
+            border: 1px solid #374151; /* border border-gray-700 */
+            text-align: center;
+        }
+
+        .stat-item .stat-number {
+            font-size: 2.5rem; /* text-5xl */
+            font-weight: 800; /* font-extrabold */
+            color: #60a5fa; /* text-blue-400 */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+
+        .stat-item .stat-label {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 500; /* font-medium */
+            color: #d1d5db; /* text-gray-300 */
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 6rem 1rem; /* py-24 px-4 */
+            text-align: center;
+            max-width: 80rem; /* max-w-5xl */
+            margin: 0 auto; /* mx-auto */
+        }
+
+        .services-subtitle {
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 600; /* font-semibold */
+            color: #84cc16; /* text-lime-500 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em; /* tracking-wider */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+
+        .services-heading {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 3rem; /* mb-12 */
+            color: #fff;
+        }
+
+        .tournament-cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* space-y-8 */
+            align-items: center;
+        }
+
+        .tournament-card {
+            background-color: #1a1a3a; /* Darker background for cards */
+            border-radius: 0.75rem; /* rounded-xl */
+            /* Removed padding from here, it's now in tournament-card-body */
+            width: 100%;
+            max-width: 24rem; /* max-w-sm */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Initial subtle shadow */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover */
+            overflow: hidden; /* Ensures child border-radius is respected */
+        }
+
+        .tournament-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.6), 0 0 50px rgba(59, 130, 246, 0.4); /* Blue glow effect */
+        }
+
+        .tournament-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem; /* px-4 py-2 */
+            /* Removed border-radius from here to apply specific top-only radius */
+            border-top-left-radius: 0.75rem; /* Match card's top-left radius */
+            border-top-right-radius: 0.75rem; /* Match card's top-right radius */
+            border-bottom-left-radius: 0; /* No radius at bottom to blend with body */
+            border-bottom-right-radius: 0; /* No radius at bottom to blend with body */
+            margin-bottom: 0; /* Remove margin-bottom to make it flush */
+            font-weight: 600; /* font-semibold */
+        }
+
+        .tournament-card-header.green {
+            background-color: #16a34a; /* bg-green-600 */
+        }
+
+        .tournament-card-header.orange {
+            background-color: #ea580c; /* bg-orange-600 */
+        }
+
+        .tournament-card-header.light-green {
+            background-color: #65a30d; /* bg-lime-700 */
+        }
+
+        .tournament-card-header .prize {
+            font-size: 1.125rem; /* text-lg */
+            color: #fff;
+        }
+
+        .tournament-card-header .time {
+            font-size: 0.875rem; /* text-sm */
+            color: #fff;
+        }
+
+        .tournament-card-body {
+            text-align: left;
+            padding: 1.5rem; /* Added padding here */
+        }
+
+        .tournament-name {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #fff;
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+
+        .prizes-placed {
+            font-size: 0.875rem; /* text-sm */
+            color: #9ca3af; /* text-gray-400 */
+            margin-bottom: 1.5rem; /* mb-6 */
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .player-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .player-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0; /* py-3 */
+            border-top: 1px solid rgba(255, 255, 255, 0.05); /* border-t border-gray-700 */
+        }
+
+        .player-item:first-child {
+            border-top: none;
+        }
+
+        .player-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem; /* space-x-4 */
+        }
+
+        .player-avatar {
+            width: 2.5rem; /* w-10 */
+            height: 2.5rem; /* h-10 */
+            border-radius: 9999px; /* rounded-full */
+            object-fit: cover;
+            background-color: #374151; /* Placeholder background */
+        }
+
+        .player-name {
+            font-size: 1rem; /* text-base */
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .player-prize {
+            font-size: 1rem; /* text-base */
+            color: #84cc16; /* text-lime-500 */
+            font-weight: 600; /* font-semibold */
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) { /* md breakpoint */
+            .header {
+                padding: 1.5rem 2rem; /* md:px-8 py-6 */
+            }
+
+            .desktop-nav {
+                display: flex; /* md:flex */
+                gap: 3rem; /* lg:space-x-12 */
+            }
+
+            .get-started-button-desktop {
+                display: block; /* md:block */
+            }
+
+            .mobile-menu-button-container {
+                display: none; /* md:hidden */
+            }
+
+            .hero-section {
+                padding: 6rem 1rem; /* Adjusted for more top space on tablet/desktop */
+            }
+
+            .hero-title {
+                font-size: 3rem; /* md:text-6xl */
+            }
+
+            .hero-description {
+                font-size: 1.25rem; /* md:text-xl */
+            }
+
+            .impressions-section .count {
+                font-size: 1.5rem; /* md:text-2xl */
+            }
+
+            .impressions-section .label {
+                font-size: 1rem; /* md:text-base */
+            }
+
+            .cta-buttons {
+                flex-direction: row; /* sm:flex-row */
+                gap: 0; /* sm:space-y-0 */
+                margin-left: 1.5rem; /* sm:space-x-6 (converted to margin-left for simplicity, can be gap) */
+                margin-right: 1.5rem;
+            }
+
+            .cta-buttons > *:not(:last-child) {
+                margin-right: 1.5rem; /* Equivalent to sm:space-x-6 */
+            }
+
+            .about-section {
+                padding: 4rem 1rem; /* Reduced padding for better user experience */
+            }
+
+            .about-section-heading {
+                font-size: 3rem; /* md:text-5xl */
+            }
+
+            .about-text {
+                font-size: 1.25rem; /* md:text-xl */
+            }
+
+            .about-stats {
+                flex-direction: row; /* md:flex-row */
+                justify-content: center;
+                gap: 2rem; /* md:space-x-8 md:space-y-0 */
+            }
+
+            .stat-item {
+                flex: 1; /* Make items take equal width */
+                max-width: 30%; /* Limit width for larger screens */
+            }
+
+            .services-section {
+                padding: 8rem 2rem; /* md:py-32 md:px-8 */
+            }
+
+            .services-heading {
+                font-size: 3rem; /* md:text-5xl */
+            }
+
+            .tournament-cards-container {
+                flex-direction: row; /* md:flex-row */
+                justify-content: center;
+                flex-wrap: wrap; /* Allow cards to wrap */
+                gap: 2rem; /* md:space-x-8 md:space-y-0 */
+            }
+
+            .tournament-card {
+                max-width: calc(33.333% - 1.5rem); /* Approx 3 cards per row with gap */
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .header {
+                padding: 1.5rem 4rem; /* lg:px-16 py-6 */
+            }
+
+            .hero-section {
+                padding: 0.5rem 1rem; /* Adjusted for more top space on large desktop */
+            }
+
+            .hero-title {
+                font-size: 4.5rem; /* lg:text-7xl */
+            }
+
+            .hero-description {
+                font-size: 1.5rem; /* lg:text-2xl */
+            }
+
+            .about-section {
+                padding: 6rem 1rem; /* Reduced padding for better user experience */
+            }
+
+            .about-section-heading {
+                font-size: 4rem; /* lg:text-6xl */
+            }
+
+            .services-section {
+                padding: 10rem 4rem; /* lg:py-40 lg:px-16 */
+            }
+
+            .services-heading {
+                font-size: 4rem; /* lg:text-6xl */
+            }
+
+            .tournament-card {
+                max-width: calc(33.333% - 1.5rem); /* Ensure 3 cards per row */
+            }
+        }
