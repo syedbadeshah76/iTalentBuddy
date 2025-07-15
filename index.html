@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTalentBuddy - Your Vision Our Mission</title>
+    <!-- Font Awesome for icons (e.g., eye icon, menu icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <!-- Placeholder for a simple icon, you could replace with an SVG or image -->
+            <i class="fas fa-laptop-code"></i>
+            <span>iTalentBuddy</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Our Work</a>
+            <a href="#">Influencers</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <!-- Get Started Button (Desktop) -->
+        <button class="get-started-button-desktop">
+            Get Started
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu-button-container">
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default, toggled by JS) -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-close-button-container">
+            <button id="close-mobile-menu-button" class="mobile-menu-close-button">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Our Work</a>
+            <a href="#">Influencers</a>
+            <a href="#">Contact</a>
+            <button class="get-started-button-mobile">
+                Get Started
+            </button>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="hero-section">
+        <h1 class="hero-title">
+            Your Vision... Our Mission...
+        </h1>
+        <p class="hero-description">
+            Professional Indian eSports organization managing tournaments, broadcasts, marketing campaigns, and influencer collaborations to uplift gaming talent across the country.
+        </p>
+
+        <!-- Impressions Section -->
+        <div class="impressions-section">
+            <i class="fas fa-eye"></i>
+            <span class="count">12M+</span>
+            <span class="label">Impressions</span>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="cta-buttons">
+            <button class="cta-button blue">
+                Book Us for Your Next Event <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="cta-button purple">
+                <i class="fas fa-play"></i> Join Our Tournaments
+            </button>
+        </div>
+          <!-- About Section -->
+    <section id="about-section" class="about-section">
+        <h2 class="about-section-heading">About iTalentBuddy: Empowering Gaming Talent</h2>
+        <div class="about-content">
+            <p class="about-text">
+                iTalentBuddy is dedicated to empowering Indian eSports talent. We manage tournaments, broadcasts, marketing, and influencer collaborations to elevate gamers nationwide.
+            </p>
+            <p class="about-text">
+                Our comprehensive platform supports aspiring gamers, providing the resources and exposure needed to succeed in competitive eSports.
+            </p>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Tournaments Hosted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Players Supported</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-section" class="services-section">
+        <p class="services-subtitle">OUR TOURNAMENT</p>
+        <h2 class="services-heading">PLAY TO EARN GAMES</h2>
+        <div class="tournament-cards-container">
+            <!-- Tournament Card 1: Weekly -->
+            <div class="tournament-card">
+                <div class="tournament-card-header green">
+                    <span class="prize">$25000</span>
+                    <span class="time">DAY HOUR MIN SEC</span>
+                </div>
+                <div class="tournament-card-body">
+                    <h3 class="tournament-name">TOURNAMENT<br>OF WEEKLY</h3>
+                    <p class="prizes-placed"><i class="fas fa-trophy"></i> 3 PRIZE PLACES</p>
+                    <ul class="player-list">
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P1" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">BLACK NINJA</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P2" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">FOXTIR MAX</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P3" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">KULAM DAVE</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tournament Card 2: Lucky Card -->
+            <div class="tournament-card">
+                <div class="tournament-card-header orange">
+                    <span class="prize">$50000</span>
+                    <span class="time">DAY HOUR MIN SEC</span>
+                </div>
+                <div class="tournament-card-body">
+                    <h3 class="tournament-name">TOURNAMENT<br>LUCKY CARD</h3>
+                    <p class="prizes-placed"><i class="fas fa-trophy"></i> 10 PRIZE PLACES</p>
+                    <ul class="player-list">
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P1" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">BLACK NINJA</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P2" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">FOXTIR MAX</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P3" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">KULAM DAVE</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tournament Card 3: Of Month -->
+            <div class="tournament-card">
+                <div class="tournament-card-header light-green">
+                    <span class="prize">$75000</span>
+                    <span class="time">DAY HOUR MIN SEC</span>
+                </div>
+                <div class="tournament-card-body">
+                    <h3 class="tournament-name">TOURNAMENT<br>OF MONTH</h3>
+                    <p class="prizes-placed"><i class="fas fa-trophy"></i> 50 PRIZE PLACES</p>
+                    <ul class="player-list">
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P1" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">BLACK NINJA</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P2" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">FOXTIR MAX</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                        <li class="player-item">
+                            <div class="player-info">
+                                <img src="https://placehold.co/40x40/374151/ffffff?text=P3" alt="Player Avatar" class="player-avatar">
+                                <span class="player-name">KULAM DAVE</span>
+                            </div>
+                            <span class="player-prize">$75000 <i class="fas fa-arrow-right"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
